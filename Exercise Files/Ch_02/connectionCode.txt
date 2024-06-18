@@ -1,0 +1,14 @@
+This file contains the necessary code to connect to RabbitMQ.
+
+
+
+
+var factory = new ConnectionFactory();
+factory.Uri = new Uri("amqp://user:password@localhost:5672");
+var connection = factory.CreateConnection();
+var channel = connection.CreateModel();
+
+// declare resources here, handle consumed events, etc
+
+channel.Close();
+connection.Close();

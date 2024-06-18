@@ -1,0 +1,43 @@
+﻿@page
+@model BookingConfirmedModel
+@{
+    ViewData["Title"] = "Booking";
+}
+<header id="contentHeader" class="hasCrumbs">
+    <h1>Booking Confirmed</h1>
+</header>
+<article id="mainArticle">
+    <h1>Thank You!</h1>
+    <div>
+        <p>Thank you @Model.Name.</p>
+        <p>Your booking for <strong>@Model.TourName</strong> has been registered.</p>
+        <p>An email was sent to @Model.Email with further instructions.</p>
+    </div>
+    <div>
+        <p>
+            If you want to cancel your booking, please fill out the form below.
+            A representative will contact you later.
+        </p>
+        <form asp-controller="Booking" asp-action="Cancel" method="post">
+            <fieldset id="personalInfo">
+                <legend><strong>Personal Information</strong></legend>
+                <input type="hidden" value="@Model.TourName" id="tourname" name="tourname"/>
+                <input type="hidden" value="@Model.Name" id="name" name="name"/>
+                <input type="hidden" value="@Model.Email" id="email" name="email"/>
+                <p>
+                    <label for="reason">Reason</label>
+                    <input name="reason"
+                           type="text"
+                           class="text"
+                           id="reason"
+                           tabindex="120"
+                           placeholder="please state the reason for cancelling"
+                           required>
+                </p>
+                <p>
+                    <input type="submit" name="submit2" id="submit2" value="Cancel" tabindex="300">
+                </p>
+            </fieldset>
+        </form>
+    </div>
+</article>

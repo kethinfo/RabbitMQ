@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExploreCalifornia.DeadLetters", "ExploreCalifornia.DeadLetters\ExploreCalifornia.DeadLetters.csproj", "{ED32142C-69AF-44F8-BD2C-B395D4F3EAF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED32142C-69AF-44F8-BD2C-B395D4F3EAF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED32142C-69AF-44F8-BD2C-B395D4F3EAF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED32142C-69AF-44F8-BD2C-B395D4F3EAF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED32142C-69AF-44F8-BD2C-B395D4F3EAF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4A716C4-07CC-4BA1-8F13-F4FE687B39AC}
+	EndGlobalSection
+EndGlobal

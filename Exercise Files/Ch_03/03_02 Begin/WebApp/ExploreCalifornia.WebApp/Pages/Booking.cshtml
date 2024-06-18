@@ -1,0 +1,51 @@
+﻿@page
+@model BookingModel
+@{
+    ViewData["Title"] = "Booking";
+}
+<header id="contentHeader" class="hasCrumbs">
+    <h1>Booking</h1>
+</header>
+<article id="mainArticle">
+    <h1>@Model.TourName</h1>
+    <div>
+        <p>Please enter your personal details and we'll contact you as soon as possible.</p>
+    </div>
+    
+    <form asp-controller="Booking" asp-action="Book" method="post">
+        <fieldset id="personalInfo">
+            <legend><strong>Personal Information</strong></legend>
+            <input type="hidden" value="@Model.TourName" id="tourname" name="tourname"/>
+            <p>
+                <label for="name">Name</label>
+                <input name="name" 
+                       type="text" 
+                       class="text" 
+                       id="name" 
+                       tabindex="100" 
+                       placeholder="first and last name" 
+                       required>
+            </p>
+            <p>
+                <label for="email">Email</label>
+                <input name="email" 
+                       type="email" 
+                       class="text" 
+                       id="email" 
+                       tabindex="110" 
+                       placeholder="valid email address" 
+                       required>
+            </p>
+            <p>
+                <label for="transport">I also need transport</label>
+                <input name="transport"
+                       type="checkbox"
+                       id="transport"
+                       tabindex="120"/>
+            </p>
+            <p>
+                <input type="submit" name="submit2" id="submit2" value="Book" tabindex="300">
+            </p>
+        </fieldset>
+    </form>
+</article>
